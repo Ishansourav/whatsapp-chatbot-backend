@@ -124,34 +124,55 @@ Output Layer:
 
 ```
 whatsapp-chatbot-backend/
+├── .ebextensions/                        # AWS Elastic Beanstalk config
+│   └── 01-env.config                     # Environment variables for AWS
+├── deploy/                               # Optional CI/CD deployment scripts
+│   ├── render-env-template.txt           # Sample Render ENV var template
+│   ├── gcp-deploy.sh                     # GCP deploy shell script
+│   └── aws-eb-cli.sh                     # AWS deploy shell script
 ├── src/
 │   ├── main/
 │   │   ├── java/
 │   │   │   └── com/
 │   │   │       └── yourorg/
 │   │   │           └── whatsappbot/
-│   │   │               ├── WhatsAppBotApplication.java
+│   │   │               ├── WhatsAppBotApplication.java     # Main Spring Boot entry
 │   │   │               ├── controller/
-│   │   │               │   └── WebhookController.java
+│   │   │               │   └── WebhookController.java      # Handles /webhook from WhatsApp API
 │   │   │               ├── service/
-│   │   │               │   └── BotService.java
+│   │   │               │   ├── BotService.java             # Core chatbot logic
+│   │   │               │   └── provider/
+│   │   │               │       ├── MetaApiService.java     # WhatsApp Cloud API integration
+│   │   │               │       ├── TwilioApiService.java   # Twilio integration (optional)
+│   │   │               │       └── GupshupApiService.java  # Gupshup integration (optional)
 │   │   │               ├── config/
-│   │   │               │   └── FirebaseConfig.java
+│   │   │               │   └── FirebaseConfig.java         # Firebase initialization
 │   │   │               ├── model/
-│   │   │               │   └── MessagePayload.java
-│   │   │               └── util/
-│   │   │                   └── ApiHelper.java
+│   │   │               │   ├── MessagePayload.java         # Incoming WhatsApp message model
+│   │   │               │   └── ApiResponse.java            # Outgoing message format
+│   │   │               ├── util/
+│   │   │               │   └── ApiHelper.java              # Helper for building HTTP requests
+│   │   │               └── exception/
+│   │   │                   └── GlobalExceptionHandler.java # Optional: centralized error handling
 │   │   └── resources/
-│   │       ├── application.properties
-│   │       └── firebase-config.json
+│   │       ├── application.properties       # ENV vars: Firebase, API tokens, provider
+│   │       ├── firebase-config.json         # Firebase admin SDK (ignored from Git)
+│   │       └── logback-spring.xml           # (Optional) Logging configuration
 │   └── test/
 │       └── java/
 │           └── com/yourorg/whatsappbot/
-│               └── BotServiceTest.java
-├── .gitignore
-├── pom.xml
-└── README.md
-```
+│               ├── BotServiceTest.java      # Unit test for chatbot logic
+│               ├── TwilioApiServiceTest.java# (Optional) Unit test for Twilio API
+│               └── WebhookControllerTest.java# Test webhook input handling
+├── .gitignore                             # Ignore target/, firebase-config.json, logs
+├── .dockerignore                          # Optional: Docker optimization
+├── Dockerfile                             # Optional: Docker deployment support
+├── Procfile                               # AWS Beanstalk launch config
+├── app.yaml                               # GCP App Engine deployment config
+├── pom.xml                                # Maven build configuration
+├── README.md                              # Full project documentation
+└── LICENSE                                # License (MIT/Apache)
+
 ---
 
 ## ⚙️ Setup Instructions (Local)
