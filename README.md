@@ -172,6 +172,7 @@ whatsapp-chatbot-backend/
 ├── pom.xml                                # Maven build configuration
 ├── README.md                              # Full project documentation
 └── LICENSE                                # License (MIT/Apache)
+```
 
 ---
 
