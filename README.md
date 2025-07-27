@@ -4,6 +4,8 @@
 
 ---
 
+![Alt Text](https://github.com/Ishansourav/whatsapp-chatbot-backend/blob/main/ChatGPT%20Image%20Jul%2027%2C%202025%2C%2011_08_23%20PM.png?raw=true)
+
 ## 🔍 Description
 
 A modular and scalable **Java + Spring Boot** backend for a WhatsApp chatbot. It integrates the **Meta WhatsApp Cloud API** with **Firebase** (Firestore or Realtime DB) and is deployable on cloud platforms like **Render**, making it ideal for real-time chatbot applications.
@@ -13,6 +15,13 @@ A modular and scalable **Java + Spring Boot** backend for a WhatsApp chatbot. It
   <img src="https://img.shields.io/badge/SpringBoot-Backend-green" alt="SpringBoot Badge"/>
   <img src="https://img.shields.io/badge/Firebase-RealtimeDB-orange" alt="Firebase Badge"/>
   <img src="https://img.shields.io/badge/MetaAPI-WhatsApp-blueviolet" alt="Meta API Badge"/>
+  <img src="https://img.shields.io/badge/Meta%20API-WhatsApp-blueviolet.svg" alt="Meta API Badge"/>
+  <img src="https://img.shields.io/badge/REST-API-red.svg" alt="REST API Badge"/>
+  <img src="https://img.shields.io/badge/Git-Version%20Control-orange.svg" alt="Git Badge"/>
+  <img src="https://img.shields.io/badge/GitHub-Code%20Hosting-black.svg" alt="GitHub Badge"/>
+  <img src="https://img.shields.io/badge/VS%20Code-IDE-blue.svg" alt="VS Code Badge"/>
+  <img src="https://img.shields.io/badge/Linux-Ubuntu%2FKali-lightgrey.svg" alt="Linux Badge"/>
+  <img src="https://img.shields.io/badge/Windows-OS-blue.svg" alt="Windows Badge"/>
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License Badge"/>
 </p>
 
@@ -275,7 +284,7 @@ mvn test
 - Meta – WhatsApp Cloud API
 - Firebase – Realtime DB & Firestore
 - Spring Boot Community
-- Crafted with ❤️ by **Dark Haven Forge** | © 2025
+- Crafted with ❤️ by **Sourav** | © 2025
 
 ---
 
