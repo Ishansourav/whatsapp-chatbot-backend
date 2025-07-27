@@ -4,7 +4,7 @@
 
 ---
 
-![Alt Text](https://github.com/Ishansourav/whatsapp-chatbot-backend/blob/main/ChatGPT%20Image%20Jul%2027%2C%202025%2C%2011_08_23%20PM.png?raw=true)
+![Alt Text](https://github.com/Ishansourav/whatsapp-chatbot-backend/blob/main/icon.png)
 
 ## 🔍 Description
 
